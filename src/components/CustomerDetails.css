@@ -25,7 +25,7 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .customer-details h2 {
         font-size: 20px;
     }
@@ -37,4 +37,4 @@
     .customer-details .address {
         font-size: 16px;
     }
-}
+} */

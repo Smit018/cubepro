@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+
+JUST CLONE THE REPOSITORY AND THEN RUN npm i and then npm start
+Please replace the Api key of mine with yours in the photogrid.tsx file under the authorization_header,so that the api can fetch images from unsplash.
+It can only fetch 50 images/hour ,after that it will show 403 error.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
