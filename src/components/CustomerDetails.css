@@ -1,0 +1,40 @@
+.customer-details {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.customer-details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.customer-details p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.customer-details .address {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .customer-details h2 {
+        font-size: 20px;
+    }
+
+    .customer-details p {
+        font-size: 14px;
+    }
+
+    .customer-details .address {
+        font-size: 16px;
+    }
+}

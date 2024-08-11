@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CustomerList from './components/CustomerList';
+import CustomerDetails from './components/CustomerDetails';
 import './App.css';
+import {customers} from './data/customersData';
+const App: React.FC = () => {
 
-function App() {
+
+  const [selectedCustomerId, setSelectedCustomerId] = useState<number | null>(null);
+
+  const handleSelectCustomer = (id: number) => {
+    setSelectedCustomerId(id);
+  };
+
+  const selectedCustomer = customers.find(customer => customer.id === selectedCustomerId);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <CustomerList
+        customers={customers}
+        selectedCustomerId={selectedCustomerId}
+        onSelectCustomer={handleSelectCustomer}
+      />
+      {selectedCustomer && (
+        <CustomerDetails
+          name={selectedCustomer.name}
+          title={selectedCustomer.title}
+          address="1234 Sample St, Sample City, Country"
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;

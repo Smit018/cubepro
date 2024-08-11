@@ -1,0 +1,27 @@
+.customer-list {
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.customer-card {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.customer-card:hover {
+    background-color: #e0e0e0;
+}
+
+.customer-card.selected {
+    background-color: #d0d0d0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .customer-card {
+        padding: 10px;
+    }
+}
